@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9aa331f192b9c064a6938bc03d628122",
+    "content-hash": "0659e1d4914c9333787b73a1985fc5f2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,66 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "dcblogdev/laravel-blade-components",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dcblogdev/laravel-blade-components.git",
+                "reference": "1118f80bbd7f6bba0789f271e23dedddd93628ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dcblogdev/laravel-blade-components/zipball/1118f80bbd7f6bba0789f271e23dedddd93628ce",
+                "reference": "1118f80bbd7f6bba0789f271e23dedddd93628ce",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0|^8.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dcblogdev\\LaravelBladeComponents\\LaravelBladeComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dcblogdev\\LaravelBladeComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Carr",
+                    "email": "dave@dcblog.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Blade components collection",
+            "homepage": "https://github.com/dcblogdev/laravel-blade-components",
+            "keywords": [
+                "blade-components-forms",
+                "dcblogdev"
+            ],
+            "support": {
+                "issues": "https://github.com/dcblogdev/laravel-blade-components/issues",
+                "source": "https://github.com/dcblogdev/laravel-blade-components/tree/v1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/dcblogdev",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-09-08T08:16:17+00:00"
         },
         {
             "name": "doctrine/inflector",

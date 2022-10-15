@@ -45,6 +45,20 @@
                                 name="password_confirmation" required />
             </div>
 
+
+            <div class="mt-4">
+                @php
+                    $options = ['user' => 'User', 'hall_owner' => 'Hall Owner'];
+                @endphp
+
+                <x-form.select class="form-select-lg" name='role' id='role' placeholder='Select'>
+                    @foreach($options as $key => $value)
+                        <x-form.selectoption key='{{ $key }}' value='{{ $value }}'></x-form.selectoption>
+                    @endforeach
+                </x-form.select>
+
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
