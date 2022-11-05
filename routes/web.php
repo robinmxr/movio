@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\MovieController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\HallOwner\HallOwnerController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,11 @@ Route::group(['middleware' => 'auth'],function(){
        'as' => 'admin.',
    ],function(){
        Route::get('/',[AdminController::class,'index'])->name('index');
+
+       Route::get('/movie',[MovieController::class,'showMovie'])->name('movie.show');
+       Route::get('/movie/{id}',[MovieController::class,'viewMovie'])->name('movie.view');
+       Route::get('/movie/create',[MovieController::class,'createMovie'])->name('movie.create');
+
    });
 
    //Hall Owner
