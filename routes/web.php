@@ -39,9 +39,8 @@ Route::group(['middleware' => 'auth'],function(){
        Route::get('/',[AdminController::class,'index'])->name('index');
 
        Route::get('/movie',[MovieController::class,'showMovie'])->name('movie.show');
-       Route::get('/movie/{id}',[MovieController::class,'viewMovie'])->name('movie.view');
        Route::get('/movie/create',[MovieController::class,'createMovie'])->name('movie.create');
-
+       Route::get('/movie/show/{id}',[MovieController::class,'viewMovie'])->name('movie.view');
    });
 
    //Hall Owner

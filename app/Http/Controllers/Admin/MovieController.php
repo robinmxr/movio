@@ -11,7 +11,7 @@ class MovieController extends Controller
 {
     public function createMovie()
     {
-        return view('admin.movie.create');
+        return view('admin.movie.store');
     }
 
     public function showMovie()
