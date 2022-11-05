@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\HallOwner\HallOwnerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::group(['middleware' => 'auth'],function(){
-
+//User Routes
    Route::group([
        'prefix' => 'user',
        'as' => 'user.'
@@ -28,7 +29,7 @@ Route::group(['middleware' => 'auth'],function(){
         Route::get('/',[UserController::class,'index'])->name('index');
    });
 
-
+//Admin Routes
    Route::group([
        'middleware' => 'is_admin',
        'prefix' =>'admin',
@@ -36,6 +37,15 @@ Route::group(['middleware' => 'auth'],function(){
    ],function(){
        Route::get('/',[AdminController::class,'index'])->name('index');
    });
+
+   //Hall Owner
+    Route::group([
+        'middleware' => 'is_hallowner',
+        'prefix' =>'hallowner',
+        'as' => 'hallowner.',
+    ],function(){
+        Route::get('/',[HallOwnerController::class,'index'])->name('index');
+    });
 });
 
 require __DIR__.'/auth.php';

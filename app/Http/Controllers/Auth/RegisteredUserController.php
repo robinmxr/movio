@@ -54,7 +54,13 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        if(\auth()->user()->role=='hall_owner') {
+            return redirect(RouteServiceProvider::HOWNERHOME);
+        }
+        else return redirect(RouteServiceProvider::HOME);
+
+
+
 
     }
 }
