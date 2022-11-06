@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\User;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -17,33 +18,22 @@ class AdminController extends Controller
 
 
 
-
-    public function store(Request $request)
+    public function viewProfile()
     {
-        //
+        $user = Auth::user();
+        return view('admin.profile.view',compact('user'));
+    }
+
+    public function editProfile()
+    {
+        $user = Auth::user();
+        return view('admin.profile.edit',compact('user'));
     }
 
 
-    public function show($id)
-    {
-        //
-    }
 
 
-    public function edit($id)
-    {
-        //
-    }
 
 
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-
-    public function destroy($id)
-    {
-        //
-    }
 }

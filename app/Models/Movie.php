@@ -18,5 +18,6 @@ class Movie extends Model
       'genre',
       'description',
       'poster',
+        'runtime',
     ];
 }

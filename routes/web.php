@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\HallOwner\HallController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\HallOwner\HallOwnerController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,9 @@ Route::group(['middleware' => 'auth'],function(){
        'as' => 'user.'
    ],function(){
         Route::get('/',[UserController::class,'index'])->name('index');
+
+       Route::get('/profile',[UserController::class,'viewProfile'])->name('profile.view');
+       Route::get('/profile/edit',[UserController::class,'editProfile'])->name('profile.edit');
    });
 
 //Admin Routes
@@ -40,7 +44,13 @@ Route::group(['middleware' => 'auth'],function(){
 
        Route::get('/movie',[MovieController::class,'showMovie'])->name('movie.show');
        Route::get('/movie/create',[MovieController::class,'createMovie'])->name('movie.create');
+       Route::post('/movie/create',[MovieController::class,'storeMovie'])->name('movie.store');
        Route::get('/movie/show/{id}',[MovieController::class,'viewMovie'])->name('movie.view');
+
+
+       Route::get('/profile',[AdminController::class,'viewProfile'])->name('profile.view');
+       Route::get('/profile/edit',[AdminController::class,'editProfile'])->name('profile.edit');
+
    });
 
    //Hall Owner
@@ -50,6 +60,15 @@ Route::group(['middleware' => 'auth'],function(){
         'as' => 'hallowner.',
     ],function(){
         Route::get('/',[HallOwnerController::class,'index'])->name('index');
+
+        Route::get('/profile',[HallOwnerController::class,'viewProfile'])->name('profile.view');
+        Route::get('/profile/edit',[HallOwnerController::class,'editProfile'])->name('profile.edit');
+
+
+        Route::get('/hall',[HallController::class,'showHall'])->name('hall.show');
+        Route::get('/hall/create',[HallController::class,'createHall'])->name('hall.create');
+       // Route::post('/hall/create',[HallController::class,'storeHall'])->name('hall.store');
+        Route::get('/hall/show/{id}',[HallController::class,'viewHall'])->name('hall.view');
     });
 });
 
