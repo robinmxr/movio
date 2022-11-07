@@ -13,7 +13,7 @@
 <div class="card mb-30"><a class="card-img-tiles" href="#" data-abc="true">
 <div class="inner">
 <div class="main-img"><img src="{{ asset('img/movie/'.$movie->poster) }}" alt="Category"></div>
-
+{{-- <div class="main-img"><img src="{{ asset('img/movie/1667744345.jpg') }}" alt="Category"></div> --}}
 </div></a>
 <div class="card-body text-center">
 <h2 class="card-title">{{ $movie->name }}</h2>

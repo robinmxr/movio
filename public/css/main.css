@@ -3304,6 +3304,7 @@ a {
 .card-img-tiles .main-img>img, .card-img-tiles .thumblist>img {
   display: block;
   width: 100%;
+  height: 300px;
   margin-bottom: 6px;
 }
 .thumblist {
@@ -3335,10 +3336,16 @@ a {
   background-color: var(--color-secondary);
 }
 
-.btn-movie:hover {
+.btn-movie:hover, .btn-user:hover {
   background-color: var(--color-primary);
   color: #fff;
 }
+
+
+.btn-user {
+  background-color: var(--color-secondary);
+}
+
 
 .container-glass {
   /* From https://css.glass */
@@ -3360,5 +3367,3 @@ border: 1px solid rgba(100, 105, 139, 0.35);
   width: 100%;
   background-size: cover;
 }
-
-
