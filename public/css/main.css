@@ -3367,3 +3367,11 @@ border: 1px solid rgba(100, 105, 139, 0.35);
   width: 100%;
   background-size: cover;
 }
+
+.main-img2>img
+{
+    display: block;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 6px;
+}

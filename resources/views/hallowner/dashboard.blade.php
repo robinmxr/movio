@@ -61,8 +61,8 @@
                             <div class="sidebar-item categories">
                                 <h3 class="sidebar-title">Menu</h3>
                                 <ul class="mt-3">
-                                    <li><a href="#">Profile</a></li>
-                                    <li><a href="#">My Hall </a></li>
+                                    <li><a href="{{ route('hallowner.profile.view') }}">Profile</a></li>
+                                    <li><a href="{{ route('hallowner.hall.show') }}">My Hall </a></li>
                                     <li><a href="#">My Tickets</a></li>
                                     <li><a href="#">Revenue </a></li>
 

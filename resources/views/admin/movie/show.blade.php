@@ -23,7 +23,7 @@
 {{--        <p>Year <h4>{{ $movie->year }}</h4></p>--}}
 {{--</div>--}}
 <div class="mt-3">
-    <button class="btn btn-lg btn-movie">View Details</button>
+    <a href="{{ route('admin.movie.view',$movie->id) }}" ><button class="btn btn-lg btn-movie">View Details</button></a>
 </div>
 </div>
 </div>

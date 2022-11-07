@@ -61,10 +61,10 @@
                             <div class="sidebar-item categories">
                                 <h3 class="sidebar-title">Menu</h3>
                                 <ul class="mt-3">
-                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="{{ route('admin.profile.view') }}">Profile</a></li>
                                     <li><a href="#">Users </a></li>
                                     <li><a href="#">Hall Owners</a></li>
-                                    <li><a href="#">Movies </a></li>
+                                    <li><a href="{{ route('admin.movie.show') }}">Movies </a></li>
 
                                 </ul>
                             </div><!-- End sidebar categories-->

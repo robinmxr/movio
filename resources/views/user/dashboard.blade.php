@@ -61,7 +61,7 @@
                         <div class="sidebar-item categories">
                             <h3 class="sidebar-title">Menu</h3>
                             <ul class="mt-3">
-                                <li><a href="#">Profile</a></li>
+                                <li><a href="{{ route('user.profile.view') }}">Profile</a></li>
                                 <li><a href="#">My Tickets </a></li>
                                 <li><a href="#">My Reviews </a></li>
                                 <li><a href="#">Upcoming Movies </a></li>
