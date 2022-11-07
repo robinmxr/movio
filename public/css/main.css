@@ -3224,7 +3224,10 @@ input {
 }
 
 .card-2 .card-heading {
-  background: url("../img/poster1.jpg") top left/cover no-repeat;
+  background: url("../img/hero-bg-abstract.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 29.1%;
   display: table-cell;
 }
@@ -3348,7 +3351,14 @@ backdrop-filter: blur(6.6px);
 border: 1px solid rgba(100, 105, 139, 0.35);
 }
 
-.poster {
-  width: 50%;
-  height: 35%;
+/* poster view */
+
+
+
+.poster-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
+
+
