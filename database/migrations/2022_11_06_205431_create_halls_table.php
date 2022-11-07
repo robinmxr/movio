@@ -15,6 +15,11 @@ class CreateHallsTable extends Migration
     {
         Schema::create('halls', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('owner_id');
+            $table->string('name');
+            $table->string('address');
+            $table->string('description');
+            $table->string('image');
             $table->timestamps();
         });
     }

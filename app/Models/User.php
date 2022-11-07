@@ -42,4 +42,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /*HallOwner*/
+    public function hall()
+    {
+        return $this->hasMany('App\Models\Hall');
+    }
+
+
 }
