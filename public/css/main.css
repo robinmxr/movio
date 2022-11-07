@@ -3363,9 +3363,8 @@ border: 1px solid rgba(100, 105, 139, 0.35);
 
 
 .poster-image {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
+  border: 10px solid black; 
+  border-radius: 2%;
 }
 
 .main-img2>img
@@ -3375,3 +3374,5 @@ border: 1px solid rgba(100, 105, 139, 0.35);
     height: 500px;
     margin-bottom: 6px;
 }
+
+
