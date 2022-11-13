@@ -26,6 +26,14 @@ class HallOwnerController extends Controller
         return view('hallowner.profile.edit',compact('user'));
     }
 
+    public function updateProfile(Request $request)
+    {
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->save();
+        return redirect()->route('hallowner.profile.view');
+
+    }
 
 
 

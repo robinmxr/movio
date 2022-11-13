@@ -30,6 +30,15 @@ class AdminController extends Controller
         return view('admin.profile.edit',compact('user'));
     }
 
+    public function updateProfile(Request $request)
+    {
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->save();
+        return redirect()->route('admin.profile.view');
+
+    }
+
 
 
 

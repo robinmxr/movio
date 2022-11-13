@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'],function(){
         Route::get('/',[UserController::class,'index'])->name('index');
 
        Route::get('/profile',[UserController::class,'viewProfile'])->name('profile.view');
+       Route::post('/profile',[UserController::class,'updateProfile'])->name('profile.update');
        Route::get('/profile/edit',[UserController::class,'editProfile'])->name('profile.edit');
    });
 
@@ -49,6 +50,7 @@ Route::group(['middleware' => 'auth'],function(){
 
 
        Route::get('/profile',[AdminController::class,'viewProfile'])->name('profile.view');
+       Route::post('/profile',[AdminController::class,'updateProfile'])->name('profile.update');
        Route::get('/profile/edit',[AdminController::class,'editProfile'])->name('profile.edit');
 
    });
@@ -62,6 +64,7 @@ Route::group(['middleware' => 'auth'],function(){
         Route::get('/',[HallOwnerController::class,'index'])->name('index');
 
         Route::get('/profile',[HallOwnerController::class,'viewProfile'])->name('profile.view');
+        Route::post('/profile',[HallOwnerController::class,'updateProfile'])->name('profile.update');
         Route::get('/profile/edit',[HallOwnerController::class,'editProfile'])->name('profile.edit');
 
 

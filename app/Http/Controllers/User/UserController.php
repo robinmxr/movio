@@ -24,4 +24,13 @@ class UserController extends Controller
         $user = Auth::user();
         return view('user.profile.edit',compact('user'));
     }
+
+    public function updateProfile(Request $request)
+    {
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->save();
+        return redirect()->route('user.profile.view');
+
+    }
 }
