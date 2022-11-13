@@ -63,9 +63,9 @@
                         @if(auth()->user()->role=='admin')
                             <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
                             @elseif(auth()->user()->role=='hall_owner')
-                            <li><a href="{{ route('hallowner.index') }}">Hall Owner Dashboard</a></li>
+                            <li><a href="{{ route('hallowner.index') }}">Dashboard</a></li>
                             @else
-                                <li><a href="{{ route('user.index') }}">User Dashboard</a></li>
+                                <li><a href="{{ route('user.index') }}">Dashboard</a></li>
                         @endif
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf

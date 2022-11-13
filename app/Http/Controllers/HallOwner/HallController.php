@@ -51,4 +51,15 @@ class HallController extends Controller
 
         return redirect()->route('hallowner.hall.show');
     }
+
+    public function createTheatre()
+    {
+        return view('hallowner.hall.theatre.create');
+    }
+
+    public function viewTheatre()
+    {
+        return view('hallowner.hall.theatre.view');
+    }
+
 }

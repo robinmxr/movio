@@ -22,18 +22,24 @@
 {{--        <p>Genre <h4>{{ $hall->genre }}</h4></p>--}}
 {{--        <p>Year <h4>{{ $hall->year }}</h4></p>--}}
 {{--</div>--}}
-<a class="mt-3">
+<div class="mt-3">
     <a href="{{ route('hallowner.hall.view',$hall->id) }}" ><button class="btn btn-lg btn-movie">View Details</button></a>
 </div>
 </div>
 </div>
 </div>
+
         @endforeach
 
 
 </div>
+        <div class="mb-5 mt-5">
+            <a href="{{ route('hallowner.hall.create') }}" ><button class="btn btn-lg btn-movie">Add Hall</button></a>
+        </div>
 </div>
 </div>
+
+
 
 
 @endsection

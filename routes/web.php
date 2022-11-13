@@ -72,6 +72,9 @@ Route::group(['middleware' => 'auth'],function(){
         Route::get('/hall/create',[HallController::class,'createHall'])->name('hall.create');
         Route::post('/hall/create',[HallController::class,'storeHall'])->name('hall.store');
         Route::get('/hall/show/{id}',[HallController::class,'viewHall'])->name('hall.view');
+
+        Route::get('/hall/theatre/create',[HallController::class,'createTheatre'])->name('theatre.create');
+        Route::get('/hall/theatre/{id}',[HallController::class,'viewTheatre'])->name('theatre.view');
     });
 });
 
