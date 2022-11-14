@@ -23,9 +23,36 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="col-xl-12 mt-3 ">
+                        <div class="mt-3">
+                            <div class="col-md-12 text-center card mb-2">
+                                <div class="card-header">
+                                <h1>Hola</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="main-img2 img-container">
+                                    <img src="{{ asset('img/hall/'.$hall->image) }}" alt="Category">
+                                    <div class="bottom-mid ">
+                                        <h2>{{$hall->name}}</h2>
+                                        <a href="{{ route('hallowner.hall.view',$hall->id) }}" >
+                                            <button class="btn btn-lg btn-movie">View Details</button>
+                                        </a>
+                                    </div>    
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-md-12 text-center card mt-3">
+                            <div class="card-header">
+                            <h1>Image</h1>
+                            </div>
+                        </div>
+
+                    <div class="col-xl-12 mt-1 text-center">
                         {{-- <img class="poster" src="{{ asset('img/hall/'.$hall->image) }}" /> --}}
                         <img class="poster" src="{{ asset('img/about.jpg') }}" />
+                    </div>
+                    <div class="col-xl-12 mt-3">
+                        <h3>Description:</h3> <p>al la </p>
                     </div>
                 </div>
             </div>
