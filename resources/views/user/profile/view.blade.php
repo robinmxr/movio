@@ -19,7 +19,7 @@
                     </div>
                     <div class="row mt-2">
                         <div class="alert alert-secondary"><h4 class="text">Name: <small>{{ $user->name }} </small></h4></div>
-                        {{--                        <div class="alert alert-secondary"><h4 class="text">Gender: <small>{{ $user->gender }} </small></h4></div>--}}
+                                               {{-- <div class="alert alert-secondary"><h4 class="text">Gender: <small>{{ $user->gender }} </small></h4></div> --}}
                         {{--                        <div class="alert alert-secondary"><h4 class="text">Birth Day: <small>{{ $user->birthdate }} </small></h4></div>--}}
                         {{--                        <div class="alert alert-secondary"><h4 class="text">Area: <small>{{ $user->area }} </small></h4></div>--}}
                         {{--                        <div class="alert alert-secondary"><h4 class="text">Address: {{ $user->address }} </h4></div>--}}

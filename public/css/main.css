@@ -3364,4 +3364,19 @@ border: 1px solid rgba(100, 105, 139, 0.35);
     margin-bottom: 6px;
 }
 
+.poster {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
 
+.btn-hall {
+  width: 100%;
+  border-radius: 0%;
+  background-color: var(--color-default);
+}
+
+.btn-hall:hover {
+  background-color: var(--color-primary);
+  color: white;
+}

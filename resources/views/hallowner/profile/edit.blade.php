@@ -57,7 +57,7 @@
                             {{--                <div class="form-outline mb-4">--}}
                             {{--                  <textarea class="form-control" id="form6Example7" rows="4"></textarea>--}}
                             {{--                  <label class="form-label" for="form6Example7">Additional information</label>--}}
-                            {{--                </div>--}}
+                                           </div>
                             <button type="submit" class="btn btn-lg btn-user profile-button">Edit Profile</button>
                     </form>
                 </div>
@@ -65,6 +65,7 @@
 
         </div>
     </div>
+
 
 @endsection
 
