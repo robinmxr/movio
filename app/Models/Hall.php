@@ -22,4 +22,10 @@ class Hall extends Model
     {
         return $this->belongsTo('App\Models\User','owner_id');
     }
+
+    public function theatre()
+    {
+        return $this->hasMany('App\Models\Theatre');
+    }
+
 }

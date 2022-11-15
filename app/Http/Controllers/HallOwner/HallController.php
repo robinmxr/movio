@@ -4,6 +4,7 @@ namespace App\Http\Controllers\HallOwner;
 
 use App\Http\Controllers\Controller;
 use App\Models\Hall;
+use App\Models\Theatre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,14 +53,33 @@ class HallController extends Controller
         return redirect()->route('hallowner.hall.show');
     }
 
-    public function createTheatre()
+    public function createTheatre($id)
     {
-        return view('hallowner.hall.theatre.create');
+        $hall_id = $id;
+        return view('hallowner.hall.theatre.create',compact('hall_id'));
     }
 
-    public function viewTheatre()
+    public function viewTheatre($id)
     {
-        return view('hallowner.hall.theatre.view');
+        $theatre = Theatre::find($id);
+        return view('hallowner.hall.theatre.view',compact('theatre'));
+    }
+
+    public function storeTheatre(Request $request,$id)
+    {
+        $theatre = new Theatre;
+        $theatre->name = $request->name;
+        $theatre->capacity = $request->capacity;
+        $theatre->reg_price = $request->reg_price;
+        $theatre->prem_price = $request->prem_price;
+        $theatre->hall_id = $id;
+
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('img/theatre/'), $imageName);
+
+        $theatre->image = $imageName;
+        $theatre->save();
+        return redirect()->route('hallowner.hall.view',$id);
     }
 
 }

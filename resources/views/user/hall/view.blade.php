@@ -35,14 +35,12 @@
                                     <img src="{{ asset('img/theatre/'.$theatre->image) }}" alt="Category">
                                     <div class="bottom-mid ">
                                         <h2>{{ $theatre->name }}</h2>
-                                        <a href="{{ route('hallowner.theatre.view',$theatre->id) }}" >
-                                            <button class="btn btn-lg btn-movie">View Details</button>
-                                        </a>
+
                                     </div>
                                 </div>
                                 </div>
                             @endforeach
-                            <a href="{{ route('hallowner.theatre.create',$hall->id) }}"> <button class="btn btn-lg btn-movie">Add Theatre</button></a>
+
                         </div>
                         <div class="col-md-12 text-center card mt-3">
                             <div class="card-header">

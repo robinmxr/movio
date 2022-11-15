@@ -42,9 +42,23 @@ class UserController extends Controller
         return view('user.movie.show',compact('movies'));
     }
 
+    public function viewMovie($id)
+    {
+        $movie = Movie::find($id);
+        return view('user.movie.view',compact('movie'));
+    }
+
     public function showHall()
     {
         $halls = Hall::lazy();
         return view('user.hall.show',compact('halls'));
     }
+
+    public function viewHall($id)
+    {
+        $hall = Hall::find($id);
+        return view('user.hall.view',compact('hall'));
+    }
+
+
 }
