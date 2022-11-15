@@ -33,6 +33,9 @@ Route::group(['middleware' => 'auth'],function(){
        Route::get('/profile',[UserController::class,'viewProfile'])->name('profile.view');
        Route::post('/profile',[UserController::class,'updateProfile'])->name('profile.update');
        Route::get('/profile/edit',[UserController::class,'editProfile'])->name('profile.edit');
+
+       Route::get('/movie',[UserController::class,'showMovie'])->name('movie.show');
+       Route::get('/hall',[UserController::class,'showHall'])->name('hall.show');
    });
 
 //Admin Routes
