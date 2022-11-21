@@ -2138,6 +2138,7 @@ section {
 --------------------------------------------------------------*/
 .blog .blog-details {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-height: 30rem;
   padding: 30px;
   border-radius: 10px;
 }
@@ -2230,7 +2231,6 @@ section {
 
 .blog .blog-details .meta-bottom {
   padding-top: 10px;
-  border-top: 1px solid rgba(34, 34, 34, 0.15);
 }
 
 .blog .blog-details .meta-bottom i {
@@ -2325,6 +2325,7 @@ section {
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  background-color: #CFCFCF;
 }
 
 .blog .sidebar .sidebar-title {
@@ -3395,4 +3396,9 @@ border: 1px solid rgba(100, 105, 139, 0.35);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.1px);
   -webkit-backdrop-filter: blur(5.1px);
+}
+
+.trailer {
+  border: 2px solid #000;
+  border-radius: 2px;
 }

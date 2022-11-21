@@ -23,11 +23,7 @@
                             </div><!-- End meta top -->
 
                             <div class="content">
-                                <h1>Name : {{ auth()->user()->name }} </h1>
-
-
-
-
+                                <h2>Name : {{ auth()->user()->name }} </h2>
                             </div><!-- End post content -->
 
                             <div class="meta-bottom">

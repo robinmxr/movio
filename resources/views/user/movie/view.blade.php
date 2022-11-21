@@ -10,9 +10,9 @@
                     <div class="p-3 py-5">
 
                         <img class="img-fluid poster-image" src="{{ asset('img/movie/'.$movie->poster) }}" alt="">
+                    </div>
                 </div>
-            </div>
-                <div class="col-md-5  border-right">
+                <div class="col-md-6 border-right">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h3 class="text-right">Movie Details</h3>
@@ -32,9 +32,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="my-3 text-center">
+                <div class="my-3 pb-3 text-center">
 
-                    <iframe width="853" height="480" src="{{ $movie->trailer }}" title="Targaryen Family Dinner(Slow Part)-House Of The Dragon OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="trailer" width="853" height="480" src="{{ $movie->trailer }}" title="Targaryen Family Dinner(Slow Part)-House Of The Dragon OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 </div>
             </div>
