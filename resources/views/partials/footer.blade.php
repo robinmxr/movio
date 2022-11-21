@@ -72,6 +72,7 @@
 
 <div id="preloader"></div>
 
+
 <!-- Vendor JS Files -->
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/aos/aos.js') }}"></script>
@@ -83,6 +84,7 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('js/main.js') }}"></script>
+
 
 </body>
 

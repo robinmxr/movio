@@ -5,7 +5,7 @@
     <div class="page-wrapper bg-default p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w960">
 
-{{--Todo --}}
+
             <div class="row">
                 @foreach($movies as $movie)
 
@@ -23,7 +23,7 @@
                                 {{--        <p>Year <h4>{{ $movie->year }}</h4></p>--}}
                                 {{--</div>--}}
                                 <div class="mt-3">
-                                    <a href="{{ route('user.movie.view',$movie->id) }}" ><button class="btn btn-lg btn-movie">View Details</button></a>
+                                    <a href="{{ route('hallowner.movie.view',$movie->id) }}" ><button class="btn btn-lg btn-movie">View Details</button></a>
                                 </div>
                             </div>
                         </div>
