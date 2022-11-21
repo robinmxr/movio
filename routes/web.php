@@ -24,6 +24,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/ex', function () {
+    return view('ex');
+})->name('ex');
+
 Route::group(['middleware' => 'auth'],function(){
 //User Routes
    Route::group([
