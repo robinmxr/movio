@@ -64,7 +64,8 @@
                                 <li><a href="{{ route('user.profile.view') }}">Profile</a></li>
                                 <li><a href="#">My Tickets </a></li>
                                 <li><a href="#">My Reviews </a></li>
-                                <li><a href="#">Upcoming Movies </a></li>
+                                <li><a href="{{ route('user.movie.show') }}">Movies </a></li>
+                                <li><a href="{{ route('user.hall.show') }}">Halls </a></li>
 
                             </ul>
                         </div><!-- End sidebar categories-->

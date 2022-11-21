@@ -37,6 +37,12 @@ Route::group(['middleware' => 'auth'],function(){
        Route::get('/profile',[UserController::class,'viewProfile'])->name('profile.view');
        Route::post('/profile',[UserController::class,'updateProfile'])->name('profile.update');
        Route::get('/profile/edit',[UserController::class,'editProfile'])->name('profile.edit');
+
+       Route::get('/movie',[UserController::class,'showMovie'])->name('movie.show');
+       Route::get('/movie/{id}',[UserController::class,'viewMovie'])->name('movie.view');
+
+       Route::get('/hall',[UserController::class,'showHall'])->name('hall.show');
+       Route::get('/hall/{id}',[UserController::class,'viewHall'])->name('hall.view');
    });
 
 //Admin Routes
@@ -77,7 +83,8 @@ Route::group(['middleware' => 'auth'],function(){
         Route::post('/hall/create',[HallController::class,'storeHall'])->name('hall.store');
         Route::get('/hall/show/{id}',[HallController::class,'viewHall'])->name('hall.view');
 
-        Route::get('/hall/theatre/create',[HallController::class,'createTheatre'])->name('theatre.create');
+        Route::get('/hall/theatre/create/{id}',[HallController::class,'createTheatre'])->name('theatre.create');
+        Route::post('/hall/theatre/create/{id}',[HallController::class,'storeTheatre'])->name('theatre.store');
         Route::get('/hall/theatre/{id}',[HallController::class,'viewTheatre'])->name('theatre.view');
     });
 });
