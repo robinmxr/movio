@@ -62,24 +62,32 @@ class BookingController extends Controller
 
         public function saveBooking(Request $request,$id)
         {
-            foreach($request->date as $date)
+            $dates = explode(",",$request->date);
+            foreach($dates as $date)
             {
-                if($date)
-                {
                 $show = new ShowBooking;
                 $show->date = $date;
                 $show->booking_id= $id;
                 $show->save();
-                }
             }
+            // foreach($request->date as $date)
+            // {
+            //     if($date)
+            //     {
+            //     $show = new ShowBooking;
+            //     $show->date = $date;
+            //     $show->booking_id= $id;
+            //     $show->save();
+            //     }
+            // }
 
-            return redirect()->route('hallowner.index');
+             return redirect()->route('hallowner.index');
         }
 
         public function showBooking()
         {
             $booking = Booking::where('hall_id',Auth::user()->hall->id)->get();
-            dd($booking);
+            return view('hallowner.booking.show',compact('booking'));
         }
 
 

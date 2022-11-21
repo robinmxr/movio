@@ -36,7 +36,11 @@
 
     <script type="text/javascript">
         $(function() {
-            $('#datepicker').datepicker();
+            $('#datepicker').datepicker(
+                {
+                    multidate:true
+                }
+            );
         });
     </script>
 

@@ -100,8 +100,9 @@ Route::group(['middleware' => 'auth'],function(){
 
        Route::get('/halls',[BookingController::class,'getHall'])->name('halls');
        Route::get('/theatres',[BookingController::class,'getTheatre'])->name('theatres');
-       Route::get('/booking/{id}',[BookingController::class,'createBooking'])->name('booking.create');
+
        Route::get('/booking/show',[BookingController::class,'showBooking'])->name('booking.show');
+       Route::get('/booking/{id}',[BookingController::class,'createBooking'])->name('booking.create');
        Route::post('/booking',[BookingController::class,'storeBooking'])->name('booking.store');
        Route::get('/booking/date',[BookingController::class,'dateBooking'])->name('booking.date');
        Route::post('/booking/date/{id}',[BookingController::class,'saveBooking'])->name('booking.save');

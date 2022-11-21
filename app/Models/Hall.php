@@ -20,7 +20,7 @@ class Hall extends Model
 
     public function owner()
     {
-        return $this->belongsTo('App\Models\User','owner_id');
+        return $this->belongsTo('App\Models\User','user_id');
     }
 
     public function theatre()

@@ -4,7 +4,7 @@
 
 <div class="page-wrapper bg-default p-t-100 p-b-100 font-robo">
     <div class="wrapper wrapper--w960">
-
+{{--Todo --}}
 
     <div class="row">
         @foreach($booking as $bk)
@@ -18,7 +18,7 @@
 <h2 class="card-title">{{ $bk->movie->name }}</h2>
 <div class="card-footer">
 
-       <p>Time <h4>{{ $bk->hall->name }}</h4></p>
+       <p>Hall<h4>{{ $bk->hall->name }}</h4></p>
 </div>
 {{--        <p>Year <h4>{{ $movie->year }}</h4></p>--}}
 {{--</div>--}}
@@ -28,7 +28,7 @@
 </div>
         @endforeach
 
-    <a href="#"><button class="btn btn-lg btn-movie">Add Time Slot</button></a>
+
 
 </div>
 </div>

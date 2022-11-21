@@ -65,6 +65,7 @@
                                     <li><a href="{{ route('hallowner.hall.show') }}">My Hall </a></li>
                                     <li><a href="#">My Tickets</a></li>
                                     <li><a href="#">Revenue </a></li>
+                                    
 
                                 </ul>
                             </div><!-- End sidebar categories-->

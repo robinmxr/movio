@@ -18,7 +18,7 @@ class HallController extends Controller
 
     public function showHall()
     {
-        $halls = Hall::where('owner_id',Auth::user()->id)->get();
+        $halls = Hall::where('user_id',Auth::user()->id)->get();
         return view('hallowner.hall.show',compact('halls'));
     }
 
