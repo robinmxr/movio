@@ -21,7 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'phone',
+        'address',
+
     ];
 
     /**
@@ -47,7 +50,7 @@ class User extends Authenticatable
     /*HallOwner*/
     public function hall()
     {
-        return $this->hasMany('App\Models\Hall');
+        return $this->hasOne('App\Models\Hall');
     }
 
 

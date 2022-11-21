@@ -28,4 +28,10 @@ class Hall extends Model
         return $this->hasMany('App\Models\Theatre');
     }
 
+
+    public function booking()
+    {
+        return $this->hasMany('App\Models\Booking');
+    }
+
 }
