@@ -2230,7 +2230,6 @@ section {
 
 .blog .blog-details .meta-bottom {
   padding-top: 10px;
-  border-top: 1px solid rgba(34, 34, 34, 0.15);
 }
 
 .blog .blog-details .meta-bottom i {
@@ -3397,3 +3396,11 @@ border: 1px solid rgba(100, 105, 139, 0.35);
   -webkit-backdrop-filter: blur(5.1px);
 }
 
+.butn {
+    color:rgba(0, 106, 93, 1);
+    font-size: 1rem;
+}
+
+.blog-details {
+    min-height: 30rem;
+}
