@@ -2,43 +2,30 @@
 
 @section('content')
 
-<div class="page-wrapper bg-default p-t-100 p-b-100 font-robo">
-    <div class="wrapper wrapper--w960">
-        <div class="container rounded bg-white mb-5">
-            <div class="row">
-                <div class="col-md-6 border-right">
-                    <div class="p-3 py-5">
-
-                        <img class="img-fluid poster-image" src="{{ asset('img/movie/'.$movie->poster) }}" alt="">
-                </div>
-            </div>
-                <div class="col-md-5  border-right">
-                    <div class="p-3 py-5">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h3 class="text-right">Movie Details</h3>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="alert alert-secondary">
-                                <h4 class="text p-2">Name: <small>{{ $movie->name }} </small></h4>
-                                <h4 class="text p-2">Genre: <small>{{ $movie->genre }} </small></h4>
-                                <h4 class="text p-2">Casts: <small>{{ $movie->casts }} </small></h4>
-                                <h4 class="text p-2">Description: <small>{{ $movie->description }} </small></h4>
-                            </div>
-                            {{--                        <div class="alert alert-secondary"><h4 class="text">Gender: <small>{{ $movie->gender }} </small></h4></div>--}}
-                            {{--                        <div class="alert alert-secondary"><h4 class="text">Birth Day: <small>{{ $movie->birthdate }} </small></h4></div>--}}
-                            {{--                        <div class="alert alert-secondary"><h4 class="text">Area: <small>{{ $movie->area }} </small></h4></div>--}}
-                            {{--                        <div class="alert alert-secondary"><h4 class="text">Address: {{ $movie->address }} </h4></div>--}}
-
-                        </div>
-                    </div>
-                </div>
-                <div class="my-3 text-center">
-
-                    <iframe width="853" height="480" src="{{ $movie->trailer }}" title="Targaryen Family Dinner(Slow Part)-House Of The Dragon OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                </div>
-            </div>
+<section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row aos-init aos-animate" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>{{ $movie->name }}</h2>
+          <p>{{ $movie->genre }} </p>
+          <h5 class="">{{ $movie->casts }}</h5>
+          <p>{{ $movie->description }} </p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Book Ticket</a>
+          </div>
         </div>
-</div>
-</div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="{{ asset('img/movie/'.$movie->poster) }}" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5 pb-3 text-center">
+        <iframe class="trailer" width="853" height="480" src="{{ $movie->trailer }}" title="Targaryen Family Dinner(Slow Part)-House Of The Dragon OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    
+  </section>
+
+  
 @endsection
