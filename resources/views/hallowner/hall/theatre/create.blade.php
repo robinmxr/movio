@@ -29,10 +29,7 @@
                             <input type="number" name="prem_price" class="form-control form-control-sm mt-1" placeholder="">
                         </div>
 
-                        <div class="form-group mt-2">
-                            <label for="">Image</label>
-                            <input type="file" name="image" class="form-control form-control-sm mt-1" placeholder="">
-                        </div>
+                        
                         <div class="p-t-30">
                             <button type="submit" class="btn btn-lg btn-movie">Submit</button>
                         </div>

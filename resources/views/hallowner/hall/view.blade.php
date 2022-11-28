@@ -30,12 +30,14 @@
                                 </div>
                             </div>
                             @foreach($hall->theatre as $theatre)
-                            <div class="col-md-4 col-sm-6">
-                                <div class="main-img2 img-container">
-                                    <img src="{{ asset('img/theatre/'.$theatre->image) }}" alt="Category">
-                                    <div class="bottom-mid ">
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="cadu">
+
+                                    <div class="card-body">
                                         <h2>{{ $theatre->name }}</h2>
-                                        <a href="{{ route('hallowner.theatre.view',$theatre->id) }}" >
+
+                                    </div>
+                                    <div class="card-footer"><a href="{{ route('hallowner.theatre.view',$theatre->id) }}" >
                                             <button class="btn btn-lg btn-movie">View Details</button>
                                         </a>
                                     </div>

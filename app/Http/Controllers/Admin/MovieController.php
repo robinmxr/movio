@@ -27,6 +27,12 @@ class MovieController extends Controller
         return view('admin.movie.view',compact('movie'));
     }
 
+    public function editMovie($id)
+    {
+        $movie = Movie::find($id);
+        return view('admin.movie.edit',compact('movie'));
+    }
+
 
     public function storeMovie(Request $request)
     {
@@ -56,5 +62,12 @@ class MovieController extends Controller
         $movie->save();
 
         return redirect()->route('admin.movie.show');
+    }
+
+    public function updateMovie(Request $request,$id)
+    {
+        $movie = Movie::find($id);
+        $movie->update($request->all());
+        return redirect()->route('admin.movie.view',$id);
     }
 }

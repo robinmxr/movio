@@ -42,7 +42,7 @@ class HallController extends Controller
        $hall->name = $request->name;
        $hall->address = $request->address;
        $hall->description = $request->description;
-       $hall->owner_id = Auth::user()->id;
+       $hall->user_id = Auth::user()->id;
 
         $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path('img/hall'), $imageName);
@@ -74,10 +74,7 @@ class HallController extends Controller
         $theatre->prem_price = $request->prem_price;
         $theatre->hall_id = $id;
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('img/theatre/'), $imageName);
-
-        $theatre->image = $imageName;
+       
         $theatre->save();
         return redirect()->route('hallowner.hall.view',$id);
     }

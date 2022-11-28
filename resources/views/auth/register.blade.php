@@ -46,7 +46,7 @@
             </div>
 
 
-            <div class="mt-4">
+            <div class="mt-4 text-center">
                 @php
                     $options = ['user' => 'User', 'hall_owner' => 'Hall Owner'];
                 @endphp

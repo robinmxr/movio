@@ -33,8 +33,7 @@ class AdminController extends Controller
     public function updateProfile(Request $request)
     {
         $user = Auth::user();
-        $user->name = $request->name;
-        $user->save();
+        $user->update($request->all());
         return redirect()->route('admin.profile.view');
 
     }

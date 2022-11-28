@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
                 <h2 class="title">Book a Show</h2>
-                <form method="POST" action="{{ route('hallowner.booking.store') }}">
+                <form method="post" action="{{ route('hallowner.booking.store') }}">
                     @csrf
                         <div class="form-group mt-3">
                             <label for="">Movie - {{ $movie->name }}</label>
