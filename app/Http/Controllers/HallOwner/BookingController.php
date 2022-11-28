@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\ShowBooking;
 use App\Models\ShowTime;
+use App\Models\Ticket;
 
 class BookingController extends Controller
 {
@@ -29,7 +30,7 @@ class BookingController extends Controller
         }
         private function getHall()
         {
-            $halls = Hall::where('owner_id',Auth::user()->id)->get();
+            $halls = Hall::where('user_id',Auth::user()->id)->get();
             return $halls;
         }
         public function getTheatre(Request $request)
@@ -63,31 +64,53 @@ class BookingController extends Controller
         public function saveBooking(Request $request,$id)
         {
             $dates = explode(",",$request->date);
+            $booking = Booking::find($id);
+            $capacity = $booking->theatre->capacity;
             foreach($dates as $date)
             {
                 $show = new ShowBooking;
                 $show->date = $date;
                 $show->booking_id= $id;
                 $show->save();
-            }
-            // foreach($request->date as $date)
-            // {
-            //     if($date)
-            //     {
-            //     $show = new ShowBooking;
-            //     $show->date = $date;
-            //     $show->booking_id= $id;
-            //     $show->save();
-            //     }
-            // }
 
-             return redirect()->route('hallowner.index');
+                for($i=1;$i<=$capacity/2;$i++)
+                {
+                    $ticket = new Ticket;
+                    $ticket->number = $i;
+                    $ticket->show_booking_id = $show->id;
+                    $ticket->quality = "Regular";
+                    $ticket->price = $booking->theatre->reg_price;
+                    $ticket->status = "Available";
+                    $ticket->save();
+
+                }
+
+                for($i=($capacity/2)+1;$i<=$capacity;$i++)
+                {
+                    $ticket = new Ticket;
+                    $ticket->number = $i;
+                    $ticket->show_booking_id = $show->id;
+                    $ticket->quality = "Premium";
+                    $ticket->price = $booking->theatre->prem_price;
+                    $ticket->status = "Available";
+                    $ticket->save();
+
+                }
+            }
+
+              return redirect()->route('hallowner.index');
         }
 
         public function showBooking()
         {
             $booking = Booking::where('hall_id',Auth::user()->hall->id)->get();
             return view('hallowner.booking.show',compact('booking'));
+        }
+
+        public function showBookingEach($id)
+        {
+            $showbookings = ShowBooking::where('booking_id',$id)->get();
+            return view('hallowner.booking.view',compact('showbookings'));
         }
 
 

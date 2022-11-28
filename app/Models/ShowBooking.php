@@ -20,4 +20,8 @@ class ShowBooking extends Model
         return $this->belongsTo('App\MOdels\Booking','booking_id');
     }
 
+    public function ticket()
+    {
+        return $this->hasMany('App\Models\Ticket');
+    }
 }

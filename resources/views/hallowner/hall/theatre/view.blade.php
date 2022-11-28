@@ -25,10 +25,7 @@
                                 </div>
 
 
-                                <div class="col-xl-12 mt-1 text-center">
-                                    {{-- <img class="poster" src="{{ asset('img/theatre/'.$theatre->image) }}" /> --}}
-                                    <img class="poster" src="{{ asset('img/theatre/'.$theatre->image) }}" />
-                                </div>
+                                
                                 <div class="col-xl-12 mt-3">
                                     <h3>Regular Ticket : {{ $theatre->reg_price }}</h3>
                                     <h3>Premium Ticket : {{ $theatre->prem_price }}</h3>

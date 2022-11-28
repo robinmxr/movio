@@ -58,6 +58,10 @@ Route::group(['middleware' => 'auth'],function(){
        Route::get('/movie',[MovieController::class,'showMovie'])->name('movie.show');
        Route::get('/movie/create',[MovieController::class,'createMovie'])->name('movie.create');
        Route::post('/movie/create',[MovieController::class,'storeMovie'])->name('movie.store');
+
+       Route::get('/movie/edit/{id}',[MovieController::class,'editMovie'])->name('movie.edit');
+       Route::post('/movie/edit/{id}',[MovieController::class,'updateMovie'])->name('movie.update');
+
        Route::get('/movie/show/{id}',[MovieController::class,'viewMovie'])->name('movie.view');
 
 

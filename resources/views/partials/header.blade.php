@@ -32,6 +32,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
@@ -78,10 +82,8 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
-                                <li><a href="route('logout')"
-    onclick="event.preventDefault();
-    this.closest('form').submit();">
-        {{ __('Log Out') }}</a></li>
+                                <li><button type="submit" class="buton">{{ __('Log Out') }}</button>
+        </li>
                             </form>
 
                     </ul>
@@ -90,7 +92,6 @@
 
             </ul>
         </nav><!-- .navbar -->
-
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 

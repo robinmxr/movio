@@ -2,6 +2,7 @@
 
 @section('content')
     <section class="breadcrumbs">
+
     </section><!-- End Breadcrumbs -->
 
 
@@ -10,11 +11,13 @@
             <div class="col-md-4 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"></div>
 
-                <div class="alert alert-secondary">
+                {{-- <div class="alert alert-secondary">
                     <h4 class="text p-2">Name: {{ $user->name }}</h4>
                     <h4 class="text p-2">Email: {{ $user->email }}</h4>
-                </div>
+                </div> --}}
             </div>
+
+
             <div class="col-md-8  border-right">
                 <div class="container mt-5">
                     <form action="{{ route('user.profile.update') }}" method="post">
@@ -23,10 +26,20 @@
                         <div class="row mb-4">
 
                             <div class="form-outline">
-                                <input name="name" type="text" id="form6Example1" class="form-control" />
                                 <label class="form-label" for="form6Example1">Name</label>
-                            </div>
+                                <input name="name" type="text" id="form6Example1" class="form-control" value="{{ $user->name }}"/>
 
+                            </div>
+                            <div class="form-outline">
+                                <label class="form-label" for="form6Example1">Phone Number</label>
+                                <input name="phone" type="text" id="form6Example1" class="form-control" value="{{ $user->phone }}"/>
+
+                            </div>
+                            <div class="form-outline mb-2">
+                                <label class="form-label" for="form6Example1">Address</label>
+                                <input name="address" type="text" id="form6Example1" class="form-control" value="{{ $user->address }}"/>
+
+                            </div>
 
 
                             {{--                <!-- Text input -->--}}
@@ -58,13 +71,16 @@
                             {{--                  <textarea class="form-control" id="form6Example7" rows="4"></textarea>--}}
                             {{--                  <label class="form-label" for="form6Example7">Additional information</label>--}}
                             {{--                </div>--}}
-                            <button type="submit" class="btn btn-lg btn-user profile-button">Edit Profile</button>
+                            <button type="submit" class="btn btn-user profile-button">Update Profile</button>
                     </form>
                 </div>
             </div>
 
         </div>
     </div>
+</div>
+
+
 
 @endsection
 

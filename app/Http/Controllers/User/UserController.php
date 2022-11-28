@@ -30,8 +30,7 @@ class UserController extends Controller
     public function updateProfile(Request $request)
     {
         $user = Auth::user();
-        $user->name = $request->name;
-        $user->save();
+        $user->update($request->all());
         return redirect()->route('user.profile.view');
 
     }
@@ -45,6 +44,7 @@ class UserController extends Controller
     public function viewMovie($id)
     {
         $movie = Movie::find($id);
+
         return view('user.movie.view',compact('movie'));
     }
 
