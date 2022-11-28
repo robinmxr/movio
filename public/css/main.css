@@ -3585,3 +3585,28 @@
     height: 30px;
     align-self: auto;
   }
+
+
+  .seatb {
+    border: 5px solid #000;
+    height: 70px;
+    text-align: center;
+    width: 90px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .seatex {
+    position: relative;
+    top: 14px;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .reg {
+    background-color: #0da9ef;
+  }
+
+  .prem {
+    background-color: burlywood;
+  }

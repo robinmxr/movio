@@ -8,6 +8,7 @@ use App\Http\Controllers\HallOwner\HallController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\HallOwner\HallOwnerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\MovieController as UserMovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,7 @@ Route::group(['middleware' => 'auth'],function(){
        Route::get('/profile/edit',[UserController::class,'editProfile'])->name('profile.edit');
 
        Route::get('/movie',[UserController::class,'showMovie'])->name('movie.show');
+       Route::get('/movie/ticket',[UserMovieController::class,'showTicket'])->name('ticket.show');
        Route::get('/movie/{id}',[UserController::class,'viewMovie'])->name('movie.view');
 
        Route::get('/hall',[UserController::class,'showHall'])->name('hall.show');
