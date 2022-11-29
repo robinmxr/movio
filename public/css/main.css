@@ -3610,3 +3610,14 @@
   .prem {
     background-color: burlywood;
   }
+
+  .butto{
+    color: #000;
+    background-color: #00b6a1;
+    margin-left: 10px;
+  }
+
+  .butto:hover {
+    background-color: #006459;
+    color: #fff;
+  }
